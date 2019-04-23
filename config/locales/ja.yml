@@ -9,6 +9,8 @@ ja:
           has_many: "%{record}が存在しているので削除できません"
     attributes:
       task:
+        name: 名称
+        description: 詳しい説明
       user:
         name: 名前
         email: メールドレス
