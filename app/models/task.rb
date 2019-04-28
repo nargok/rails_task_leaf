@@ -17,6 +17,20 @@ class Task < ApplicationRecord
     []
   end
 
+  # CSVエクスポートする項目の順番を定義する
+  def self.csv_attributes
+    ["name", "description", "created_at", "updated_at"]
+  end
+
+  def self.generate_csv
+    CSV.generate(headers: true) do |csv|
+      csv << csv_attributes
+      all.each do |task|
+        csv << csv_attributes.map{|attr| task.send(attr)}
+      end
+    end
+  end
+
   private
 
   def set_nameless_name
