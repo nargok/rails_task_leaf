@@ -1,5 +1,11 @@
----
 ja:
+  helpers:
+    select:
+      prompt: 選択してください
+    submit:
+      create: 登録する
+      submit: 保存する
+      update: 更新する
   activerecord:
     errors:
       messages:
@@ -153,13 +159,6 @@ ja:
       header:
         one: "%{model}にエラーが発生しました"
         other: "%{model}に%{count}個のエラーが発生しました"
-  helpers:
-    select:
-      prompt: 選択してください
-    submit:
-      create: 登録する
-      submit: 保存する
-      update: 更新する
   number:
     currency:
       format:
