@@ -1,4 +1,5 @@
 class Task < ApplicationRecord
+  paginates_per 50
   has_one_attached :image
   before_validation :set_nameless_name
 
